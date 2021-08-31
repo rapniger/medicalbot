@@ -1,0 +1,547 @@
+body{
+  background: #233422;
+}
+section{
+  max-width: $MaxWidth;
+  height: $MaxHeight;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+.wrapper{
+  width: $width;
+  margin: 0 auto;
+  background: $white;
+  border-radius: 16px;
+  position: relative;
+  &-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: $BlueRadial;
+    border-radius: 16px;
+    .logo{
+      display: block;
+      width: 48px;
+      height: 48px;
+    }
+    p{
+      width: 70%;
+      font-weight: 700;
+      color: $white;
+    }
+    .setting{
+      display: block;
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &-body{
+    padding: 30px 20px 20px 20px;
+    border-radius: 0px 0px 16px 16px;
+    background: $white;
+    height: 620px;
+    .wrapper-content{
+      .line{
+        width: 100%;
+        border: 1px solid $black;
+        opacity: .1;
+      }
+      .primary-text{
+        padding: 0px 40px;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 32px;
+        text-align: center;
+        &-1{
+          padding: 0px 20px;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 24px;
+          text-align: center;
+        }
+      }
+      .text{
+        &-1{
+          padding: 0px 39px;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 18px;
+        }
+        &-2{
+          padding: 0px 23px;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 18px;
+        }
+      }
+      img.doctor{
+        width: 242px;
+        height: 174px;
+        text-align: center;
+      }
+
+    }
+    .select-clinic{
+      display: flex;
+      padding-right: 9px;
+      height: 430px;
+      overflow-y: scroll;
+      ul{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+          margin-bottom: 10px;
+          padding: 16px;
+          background: #F2F5FA;
+          border-radius: 16px;
+          .select-clinic-header{
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            span:first-child{
+              flex: 3 1 70%;
+              font-weight: 600;
+              font-size: 15px;
+              line-height: 18px;
+            }
+            span:last-child{
+              display: inline-flex;
+              flex: 0 3 40%;
+              justify-content: center;
+            }
+          }
+          .select-clinic-body{
+            padding-bottom: 4px;
+            p{
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 17px;
+            }
+          }
+          .select-clinic-footer{
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            align-items: center;
+            justify-content: space-between;
+            span:first-child{
+              flex: 3 1 70%;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 17px;
+            }
+            span:last-child{
+              display: inline-flex;
+              flex: 0 3 40%;
+              justify-content: center;
+            }
+          }
+        }
+        li:last-child{
+          margin: 0;
+        }
+        li:hover{
+          cursor: pointer;
+        }
+      }
+    }
+    /*CHROME/Edge/Safari*/
+    /*полоса прокрутки*/
+    .select-clinic::-webkit-scrollbar{
+      width: 2px;
+    }
+    /*ползунок*/
+    .select-clinic::-webkit-scrollbar-thumb{
+      height: 100px;
+      background: #F2F5FA;
+    }
+    .inselect-clinic{
+      display: flex;
+      flex-direction: column;
+      height: 484px;
+      padding: 16px;
+      border: 1px solid rgba(34, 26, 51, 0.2);
+      border-radius: 16px;
+      .btn-content{
+        display: flex;
+        flex-direction: column;
+        p.btn{
+          margin-bottom: 10px !important;
+        }
+        .btn{
+          max-width: 70%;
+        }
+      }
+
+      .text-{
+        &1{
+          padding: 0;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 22px;
+        }
+        &2{
+          padding: 0;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 17px;
+        }
+        &3{
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 17px;
+        }
+        &4{
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 18px;
+        }
+        &5{
+
+        }
+      }
+      .rating{
+        ul{
+          display: flex;
+          flex-direction: row;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li{
+            margin-right: 10px;
+          }
+        }
+      }
+      .feedback-link{
+        width: 100%;
+        padding: 13px;
+        text-align: center;
+        background: #F7FAFF;
+        border-radius: 100px;
+      }
+    }
+    .select-color{
+      ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 20px;
+        li{
+          cursor: pointer;
+          border-radius: 50%;
+          &.circle{
+            flex: 0 0 24px;
+            width: 24px;
+            height: 24px;
+          }
+          &.circle-1{
+            flex: 0 0 24px;
+            width: 23px;
+            height: 23px;
+          }
+          &.circle-{
+            &blue{
+              background: $blue;
+            }
+            &blue-1{
+              background: $blue-1;
+            }
+            &red{
+              background: $red;
+            }
+            &yellow{
+              background: $yellow;
+            }
+            &purple{
+              background: $purple;
+            }
+            &black{
+              background: $black;
+            }
+            &gray{
+              background: $gray-3;
+            }
+            &outline-blue{
+              border: 1px solid $blue;
+            }
+            &outline-blue-1{
+              border: 1px solid $blue-1;
+            }
+            &outline-red{
+              border: 1px solid $red;
+            }
+            &outline-yellow{
+              border: 1px solid $yellow;
+            }
+            &outline-purple{
+              border: 1px solid $purple;
+            }
+            &outline-black{
+              border: 1px solid $black;
+            }
+            &outline-gray{
+              border: 1px solid $gray-3;
+            }
+          }
+        }
+      }
+      p{
+        padding: 23px 0px;
+        background: $gray-1;
+        border-radius: 16px;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+    .content-api{
+      p{
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+      }
+      p:last-child{
+        padding: 23px 0;
+        background: $gray-1;
+        border-radius: 16px;
+      }
+    }
+    .wrapper-footer{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0px 20px 20px 20px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      .a-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 18px 0px 0px 0px;
+        a{
+          color: $black;
+          font-weight: normal;
+          font-size: 10px;
+          line-height: 12px;
+        }
+      }
+    }
+  }
+}
+.wrapper.setting{
+  background: $gray-4;
+  .wrapper-body{
+    &-setting{
+      padding: 30px 20px 20px 20px;
+      border-radius: 16px;
+      background: $gray-4;
+      height: 700px;
+      .wrapper-content-setting{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+        .logo-setting{
+          text-align: center;
+        }
+        ul{
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li{
+            .btn{
+              color: $white;
+              line-height: 14px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.content-arrow-left,
+.content-close{
+  display: inline-flex;
+  flex-direction: row;
+  align-self: flex-end;
+  width: 39px;
+  height: 46px;
+  padding-top: 28px;
+  position: absolute;
+  top: 0;
+  i{
+    cursor: pointer;
+  }
+}
+.content-arrow-left{
+  justify-content: flex-start;
+  left: -39px;
+}
+.content-close{
+  justify-content: flex-end;
+  right: -39px;
+}
+form{
+  padding-top: 30px;
+  input[type="text"], textarea{
+    width: 100%;
+    padding: 23px;
+    border: none;
+    outline: none;
+    background: #F2F5FA;
+    border-radius: 16px;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  input[type="text"]{
+    text-align: center;
+  }
+  textarea{
+    height: 250px;
+    resize: none;
+  }
+  .checkbox-content{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    padding-left: 24px;
+    label{
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 12px;
+      padding-left: 22px;
+    }
+    input[type="checkbox"]{
+      position: absolute;
+      width: 0;
+      height: 0;
+
+    }
+    input[type="checkbox"]:before{
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      margin-right: 14px;
+      border: 1px solid rgba(34, 26, 51, 0.2);
+      border-radius: 4px;
+      transition: .2s ease-in-out;
+    }
+    input[type="checkbox"]:after{
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 4px;
+      height: 4px;
+      margin-right: 14px;
+      border-radius: 4px;
+      transition: .2s ease-in-out;
+    }
+    input[type="checkbox"]:checked:before{
+      display: inline-block;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      margin-right: 14px;
+      border: 1px solid $purple;
+      border-radius: 4px;
+    }
+    input[type="checkbox"]:checked:after{
+      display: inline-block;
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 4px;
+      background: $purple;
+    }
+  }
+  &.form-radiobox{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    .radiobox-content{
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      position: relative;
+      ul{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+          margin: 0;
+          padding: 0 0 18px 0;
+        }
+      }
+    }
+    label{
+      width: 100%;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+    }
+    input[type="radio"]{
+      position: absolute;
+      width: 0;
+      height: 0;
+
+    }
+    input[type="radio"]:before{
+      content: '';
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      width: 12px;
+      height: 12px;
+      margin-right: 14px;
+      border: 1px solid rgba(34, 26, 51, 0.2);
+      border-radius: 4px;
+      transition: .2s ease-in-out;
+    }
+    input[type="radio"]:after{
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 4px;
+      height: 4px;
+      margin-right: 14px;
+      border-radius: 4px;
+      transition: .2s ease-in-out;
+    }
+    input[type="radio"]:checked:before{
+      display: inline-block;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      margin-right: 14px;
+      border: 1px solid $purple;
+      border-radius: 4px;
+    }
+    input[type="radio"]:checked:after{
+      display: inline-block;
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 4px;
+      background: $purple;
+    }
+  }
+}

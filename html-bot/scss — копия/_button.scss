@@ -1,0 +1,70 @@
+.btn {
+  display: block;
+  width: 100%;
+  font-family: $font-family;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border-radius: 100px;
+  &:focus,
+  &.focus {
+    outline: 0;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+.btn-hover{
+  position: relative;
+  z-index: 9;
+}
+.btn-blue{
+  padding: 28px 0px;
+  background: $BlueRadial;
+  color: $white;
+}
+.btn.small{
+  margin: 0 !important;
+  padding: 4px 12px;
+}
+.btn-purple{
+  padding: 28px 0px;
+  background: $PurpleLinear;
+  color: $white;
+}
+.btn-hover .btn-hover-blue,
+.btn-hover .btn-hover-purple{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100px;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity .2s linear;
+  -moz-transition: opacity .2s linear;
+  -o-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+}
+.btn-hover-blue{
+  background: radial-gradient(#2DCBD0, #2DCBD0);
+}
+.btn-hover-purple{
+  background: linear-gradient(0deg, #6531A2, #6531A2);
+}
+.btn-outline-purple{
+  padding: 26px 0px;
+  border: 1px solid $purple;
+  color: $purple;
+}
+.btn:last-child{
+  margin-top: 10px;
+}

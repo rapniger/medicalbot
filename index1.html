@@ -1,15 +1,23 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.80.0">
+    <meta name="author" content="">
+    <meta name="generator" content="">
     <title>Лендинг 02</title>
     <!-- Bootstrap core CSS -->
     <link href="scss/site/bootstrap.css" rel="stylesheet">
+    <!-- Video core CSS -->
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="player/afterglow/afterglow.min.js"></script>
 </head>
 <body>
     <header>
@@ -46,19 +54,20 @@
                         <p class="choise-city-text">выбрать город</p>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Ростов-на-Дону</a>
-                        <a class="dropdown-item" href="#">Москва</a>
-                        <a class="dropdown-item" href="#">Еще города</a>
+                        <a class="dropdown-item" href="#"><i class="icon icon-line-circle"></i>Ростов</a>
+                        <a class="dropdown-item" href="#"><i class="icon icon-line-circle"></i>Москва</a>
+                        <a class="dropdown-item" href="#"><i class="icon icon-line-circle"></i>Анапа</a>
+                        <a class="dropdown-item" href="#"><i class="icon icon-line-circle"></i>Сочи</a>
                     </div>
                 </div>
                 <div class="order-phone">
                     <div class="order-phone-content">
-                        <p class="order-phone-p1">+7 (495) 123 45 67</p>
-                        <p class="order-phone-p2 text-right">Заказать обратный звонок</p>
+                        <a href="tel:+7(495)1234567" class="order-phone-p1">+7 (495) 123 45 67</a>
+                        <a href="tel:+7(495)1234567" class="order-phone-p2 text-right">Заказать обратный звонок</a>
                     </div>
-                    <div class="d-flex justify-content-center align-items-center header-phone" style="width: 48px">
+                    <a href="tel:+7(495)1234567" class="d-flex justify-content-center align-items-center header-phone" style="width: 48px">
                         <img src="images/svg/phone_white.svg" width="19" height="19" alt="Заказать обратный звонок"/>
-                    </div>
+                    </a>
                 </div>
             </nav>
         </div>
@@ -104,7 +113,7 @@
         </div>
         <div class="container block-2">
             <div class="row m-b-50">
-                <div class="col-6">
+                <div class="col-6 p-r-55">
                     <h2 class="m-t-130">Что такое мед-бот Гиппократ
                         и как он может работать на вас?</h2>
                     <p class="block-text-1 m-t-50">
@@ -112,11 +121,11 @@
                         через сайт или мобильное приложение, не требующая
                         закупки дополнительного ПО или оборудования.
                     </p>
-                    <div class="row m-t-50 block-2-card-content">
+                    <div class="row m-t-50 m-b-51 block-2-card-content">
                         <div class="col-4">
                             <div class="content">
                                 <div class="icon-content text-center"><i class="icon icon-book"></i></div>
-                                <p class="m-t-35 block-text-2 text-center"><b>Уже включает</b>
+                                <p class="m-t-35 block-text-2 text-center"><b>Уже&nbsp;включает</b>
                                     наиболее
                                     популярные
                                     заболевания.</p>
@@ -127,8 +136,8 @@
                                 <div class="icon-content text-center"><i class="icon icon-brain"></i></div>
                                 <p class="m-t-35 block-text-2 text-center"><b>Постоянно
                                     обучается</b>
-                                    и расширяет
-                                    базу знаний.</p>
+                                    и&nbsp;расширяет
+                                    базу&nbsp;знаний.</p>
                             </div>
                         </div>
                         <div class="col-4">
@@ -142,36 +151,48 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
-                    <img src="images/player.png" width="550" height="432"/>
+                <div class="col-6 p-l-55">
+                    <video class="afterglow" id="video" poster="images/player.png" width="1280" height="720" data-skin="dark">
+                        <h2>asd</h2>
+                        <source type="video/m4v" src="http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" />
+                        <source type="video/m4v" src="http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" data-quality="hd"/>
+                        <source type="video/webm" src="http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" />
+                        <source type="video/webm" src="http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" data-quality="hd"/>
+                        <source type="video/ogv" src="http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv" />
+                        <source type="video/ogv" src="http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv" data-quality="hd"/>
+                    </video>
                 </div>
             </div>
         </div>
         <div class="container block-3">
-            <div class="row">
-                <div class="col-6 block-content">
-                    <div class="block-image">
-                        <i class="icon icon-laptop"></i>
+            <div class="row m-b-59">
+                <div class="col-6 p-r-55">
+                    <div class="block-content-1">
+                        <div class="block-image">
+                            <i class="icon icon-laptop"></i>
+                        </div>
+                        <p>Быстрая интеграция и настройка. Готовое решение для любой клиники с&nbsp;подключением  на вам имеющийся сайт через API.</p>
+
                     </div>
-                    <p>Быстрая интеграция и настройка. Готовое решение для любой клиники с подключением  на вам имеющийся сайт через API.</p>
                 </div>
-                <div class="col-6 block-social-link">
-                    <p>Расскажите
-                        о Гиппократе:</p>
-                    <ul class="list-unstyled">
-                        <li><a href="#"><i class="icon icon-vk"></i></a></li>
-                        <li><a href="#"><i class="icon icon-facebook"></i></a></li>
-                        <li><a href="#"><i class="icon icon-instagram"></i></a></li>
-                        <li><a href="#"><i class="icon icon-telegram"></i></a></li>
-                        <li><a href="#"><i class="icon icon-twitter"></i></a></li>
-                    </ul>
+                <div class="col-6 p-l-55">
+                    <div class="block-social-link">
+                        <p>Расскажите&nbsp;о Гиппократе:</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="icon icon-vk"></i></a></li>
+                            <li><a href="#"><i class="icon icon-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon icon-instagram"></i></a></li>
+                            <li><a href="#"><i class="icon icon-telegram"></i></a></li>
+                            <li><a href="#"><i class="icon icon-twitter"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="container-fluid block-4">
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-6 p-r-55">
                         <h2 class="m-t-50">Что может делать чат-бот
                             в вашем медучереждении:</h2>
                         <div class="button-content m-t-56">
@@ -184,16 +205,17 @@
                         <h3 class="m-t-50">Задавать вопросы
                             и собирать анамнез.
                         </h3>
-                        <p class="m-t-44 m-b-59">
+                        <p class="m-t-44 m-b-114">
                             Собирайте детально заполненные формы о жалобах
                             и заболевании пациентов и отправляйте их врачу
                             ещё до приёма. Напрвляйте пациентов к необходимым
                             им специалистам, без лишних посещений клинки.
                         </p>
-                        <button class="btn btn-hover btn-indigo"><span class="btn-hover-indigo"></span>попробовать бесплатно</button>
+                        <button class="btn btn-hover btn-indigo block-4-btn"><span class="btn-hover-indigo"></span>попробовать бесплатно</button>
                     </div>
-                    <div class="col-6">
-                        Чат-бот
+                    <div class="col-6 p-l-55">
+                        <div class="block-image-svg">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -236,7 +258,7 @@
                 <div class="col-6 block-column-2">
                     <p class="m-t-130 text-indigo">По статистике, в 7 случаях из 10 бот является более
                         эффективным, чем реальный сотрудник.</p>
-                    <img class="m-t-23" src="images/svg/pc.svg" width="630" height="381"/>
+                    <img class="m-t-28" src="images/svg/pc.svg" width="630" height="381"/>
                     <p class="m-t-30 block-text-2">Чат-бот Гиппократ:</p>
                     <ul class="m-t-50 list-unstyled">
                         <li>
@@ -290,7 +312,9 @@
                     <a class="m-t-50 m-b-100 btn btn-hover btn-light-blue"><span class="btn-hover-light-blue"></span>Заказать бота для своей клинки</a>
                 </div>
                 <div class="col-6">
-                    123
+                    <div class="block-image">
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -545,7 +569,7 @@
             </div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <div id="jplayer_inspector"></div>
+
 </body>
 </html>

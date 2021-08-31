@@ -13,57 +13,58 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <nav class="navbar navbar-expand align-items-center">
-                <a class="navbar-brand" href="#">
-                    <img src="images/svg/logo.svg" width="48" height="48" alt="Гиппократ">
-                    <span>
+    <div class="container">
+        <nav class="navbar navbar-expand align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="images/svg/logo.svg" width="48" height="48" alt="Гиппократ">
+                <span>
                         ГИППОКРАТ
                         <small>Автоматизация обслуживания</small>
                     </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Статьи</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="choise-city dropdown">
+                <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="icon icon-geo"></i>
+                    <p class="choise-city-name">Краснодар</p>
+                    <p class="choise-city-text">выбрать город</p>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#"><i class="icon icon-line-circle"></i>Ростов</a>
+                    <a class="dropdown-item" href="#"><i class="icon icon-line-circle"></i>Москва</a>
+                    <a class="dropdown-item" href="#"><i class="icon icon-line-circle"></i>Анапа</a>
+                    <a class="dropdown-item" href="#"><i class="icon icon-line-circle"></i>Сочи</a>
+                </div>
+            </div>
+            <div class="order-phone">
+                <div class="order-phone-content">
+                    <a href="tel:+7(495)1234567" class="order-phone-p1">+7 (495) 123 45 67</a>
+                    <a href="tel:+7(495)1234567" class="order-phone-p2 text-right">Заказать обратный звонок</a>
+                </div>
+                <a href="tel:+7(495)1234567" class="d-flex justify-content-center align-items-center header-phone" style="width: 48px">
+                    <img src="images/svg/phone_white.svg" width="19" height="19" alt="Заказать обратный звонок"/>
+                </a>
+            </div>
+        </nav>
+    </div>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto align-items-center">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Новости</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Статьи</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Контакты</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="choise-city dropdown">
-                    <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="icon icon-geo"></i>
-                        <p class="choise-city-name">Краснодар</p>
-                        <p class="choise-city-text">выбрать город</p>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Ростов-на-Дону</a>
-                        <a class="dropdown-item" href="#">Москва</a>
-                        <a class="dropdown-item" href="#">Еще города</a>
-                    </div>
-                </div>
-                <div class="order-phone">
-                    <div class="order-phone-content">
-                        <p class="order-phone-p1">+7 (495) 123 45 67</p>
-                        <p class="order-phone-p2 text-right">Заказать обратный звонок</p>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center header-phone" style="width: 48px">
-                        <img src="images/svg/phone_white.svg" width="19" height="19" alt="Заказать обратный звонок"/>
-                    </div>
-                </div>
-            </nav>
-        </div>
-
-    </header>
+</header>
     <section>
         <div class="container-fluid block-1">
             <div class="container">
@@ -160,7 +161,7 @@
                     <h2 class="m-t-90 m-b-50">Интеллектуальная
                         технология, которой
                         вы можете доверять</h2>
-                    <p class="m-b-90">Искусственный интеллект бота Гиппократ использует
+                    <p class="m-t-50 m-b-90">Искусственный интеллект бота Гиппократ использует
                         знания наших практикующих врачей, нучные статьи
                         и статистические данные, которые мы получаем,
                         анализируя тысячи реальных случаев. Работает по
@@ -169,7 +170,9 @@
                     </p>
                 </div>
                 <div class="col-6">
-                    Картинка с анимацией
+                    <div class="block-image">
+
+                    </div>
                 </div>
             </div>
         </div>

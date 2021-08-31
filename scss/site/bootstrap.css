@@ -479,8 +479,6 @@ mark,
 .container-lg,
 .container-xl {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
 
@@ -2343,6 +2341,7 @@ input[type="button"].btn-block {
   white-space: nowrap; }
 
 .dropdown-menu {
+  width: 100%;
   position: absolute;
   top: 100%;
   left: 0;
@@ -2350,16 +2349,15 @@ input[type="button"].btn-block {
   display: none;
   float: left;
   min-width: 10rem;
-  padding: 0.5rem 0;
+  padding: 11px 16px;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #212529;
+  color: #221A33;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(34, 26, 51, 0.15);
-  border-radius: 100px; }
+  border-radius: 12px; }
 
 .dropdown-menu-left {
   right: auto;
@@ -2475,20 +2473,30 @@ input[type="button"].btn-block {
   border-top: 1px solid #e9ecef; }
 
 .dropdown-item {
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
-  padding: 0.25rem 1.5rem;
+  margin-bottom: 32px;
   clear: both;
-  font-weight: 400;
-  color: #212529;
+  font-family: 'MontserratRegular';
+  font-weight: 200;
+  color: #221A33;
+  font-size: 14px;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
   border: 0; }
+  .dropdown-item:first-child {
+    margin-top: 16px; }
+  .dropdown-item:last-child {
+    margin-bottom: 16px; }
+  .dropdown-item i {
+    margin-right: 13px; }
   .dropdown-item:hover, .dropdown-item:focus {
-    color: #16181b;
+    font-family: 'MontserratSemiBold';
+    font-weight: 500;
     text-decoration: none;
-    background-color: #e9ecef; }
+    transition: 0.2s; }
   .dropdown-item.active, .dropdown-item:active {
     color: #fff;
     text-decoration: none;
@@ -6118,14 +6126,15 @@ header {
   align-items: center;
   width: 260px; }
   .order-phone-content {
+    width: 200px;
     margin-right: 21px; }
-  .order-phone p {
+  .order-phone a {
     color: #fff; }
-  .order-phone p.order-phone-p1 {
+  .order-phone a.order-phone-p1 {
     font-family: 'MontserratSemiBold';
     font-size: 18px;
     line-height: 22px; }
-  .order-phone p.order-phone-p2 {
+  .order-phone a.order-phone-p2 {
     font-family: 'MontserratMedium';
     font-size: 10px;
     line-height: 12px; }
@@ -6186,6 +6195,10 @@ footer {
       width: 100%;
       height: 100%; }
 
+.block-2 .block-content:first-child {
+  padding-right: 55px !important; }
+.block-2 .block-content:last-child {
+  padding-left: 55px !important; }
 .block-2 h2 {
   width: 522px;
   font-family: 'MontserratSemiBold';
@@ -6215,8 +6228,15 @@ footer {
   padding: 35px 40px;
   border: 1px solid #F2F5FA;
   border-radius: 16px; }
+.block-2 video {
+  width: 100%;
+  border-radius: 16px; }
 
-.block-3 .block-content {
+.block-3 .block-content:first-child {
+  padding-right: 55px !important; }
+.block-3 .block-content:last-child {
+  padding-left: 55px !important; }
+.block-3 .block-content-1 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -6224,7 +6244,7 @@ footer {
   background: #F7FAFF;
   border-radius: 16px;
   padding: 26px 30px; }
-  .block-3 .block-content .block-image {
+  .block-3 .block-content-1 .block-image {
     display: flex;
     align-items: center;
     align-self: center;
@@ -6232,7 +6252,7 @@ footer {
     margin-right: 32px;
     position: relative;
     float: left; }
-  .block-3 .block-content p {
+  .block-3 .block-content-1 p {
     max-width: 480px;
     position: relative;
     float: left;
@@ -6245,7 +6265,7 @@ footer {
   flex-direction: row;
   align-items: center;
   align-self: center;
-  padding: 65px 0; }
+  padding: 45px 0; }
   .block-3 .block-social-link p {
     font-size: 18px;
     line-height: 22px; }
@@ -6270,6 +6290,21 @@ footer {
     width: 100%;
     border: 1px solid #221A33;
     opacity: 0.1; }
+  .block-4 .block-image-svg {
+    position: absolute;
+    top: 0;
+    width: 550px;
+    height: 680px;
+    background: url("../../images/bot.png") no-repeat;
+    background-size: 100%; }
+  .block-4 .block-image-svg:hover {
+    animation-name: bot-hover;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-duration: .5s; }
+  .block-4 .block-4-btn {
+    position: absolute;
+    bottom: -32px; }
 
 .block-5 .block-column-1 .block-text-1 {
   font-size: 30px;
@@ -6304,10 +6339,17 @@ footer {
     color: #fff;
     font-size: 16px;
     line-height: 21px; }
+  .block-6 .block-image {
+    width: 100%;
+    height: 100%;
+    background: url("../../images/technodad.png") no-repeat;
+    background-size: 100% 100%; }
 
 .block-7 {
   height: 480px;
   background: #F7FAFF; }
+  .block-7 .col-3:last-child .btn {
+    margin-top: 9px; }
   .block-7 .card {
     padding: 0px 17px 20px 17px;
     background: #fff;
@@ -6363,6 +6405,9 @@ footer {
           line-height: 29px; }
         .block-7 .card .card-body .price:last-child p:last-child {
           margin-bottom: 23px; }
+    .block-7 .card .card-footer .btn {
+      width: 100% !important;
+      padding: 24px 0px !important; }
 
 .block-8 {
   padding-top: 208px;
@@ -6383,7 +6428,8 @@ footer {
       padding: 16px;
       background: none;
       border: 1px solid #fff;
-      border-radius: 32px; }
+      border-radius: 32px;
+      color: #fff; }
     .block-8 .form-search-faq input[type=text]:active, .block-8 .form-search-faq input[type=text]:focus {
       outline: none; }
     .block-8 .form-search-faq button {
@@ -6459,13 +6505,11 @@ footer {
       background: #F2F5FA; }
   .block-9 .content-answer {
     display: flex;
-    justify-content: center;
-    align-self: center;
-    align-items: center;
+    padding-top: 100px;
     height: 440px;
-    background: url("../../images/svg/man.svg") right bottom no-repeat, url("../../images/svg/vector_answer.svg") center no-repeat; }
+    background: url("../../images/svg/vector_answer.svg") center no-repeat; }
     .block-9 .content-answer p {
-      padding: 0px 80px;
+      padding: 0px 180px 0px 40px;
       font-style: italic;
       text-align: center;
       font-size: 21px;
@@ -6475,7 +6519,7 @@ footer {
 .block-10 {
   margin-bottom: 50px;
   padding: 40px;
-  background: url("../../images/svg/doctor.svg") center bottom no-repeat, radial-gradient(70.1% 138.12% at 56.22% -53.37%, #A160ED 0%, #6531A2 100%), #FFFFFF;
+  background: url("../../images/svg/doctor.svg") 40% bottom no-repeat, radial-gradient(70.1% 138.12% at 56.22% -53.37%, #A160ED 0%, #6531A2 100%), #FFFFFF;
   box-shadow: 0px 10px 20px rgba(34, 26, 51, 0.1);
   border-radius: 16px; }
   .block-10 div.row div:first-child h2 {
@@ -6709,6 +6753,8 @@ footer {
 
 .m-t-23 {
   margin-top: 23px; }
+.m-t-28 {
+  margin-top: 28px; }
 .m-t-30 {
   margin-top: 30px; }
 .m-t-35 {
@@ -6737,6 +6783,8 @@ footer {
   margin-top: 130px; }
 .m-b-40 {
   margin-bottom: 40px; }
+.m-b-51 {
+  margin-bottom: 51px; }
 .m-b-59 {
   margin-bottom: 59px; }
 .m-b-73 {
@@ -6749,11 +6797,19 @@ footer {
   margin-bottom: 100px; }
 .m-b-104 {
   margin-bottom: 104px; }
+.m-b-114 {
+  margin-bottom: 114px; }
 
 .p-t-44 {
   padding-top: 44px; }
 .p-b-104 {
   padding-bottom: 104px; }
+.p-l-55 {
+  padding-right: 0px !important;
+  padding-left: 55px !important; }
+.p-r-55 {
+  padding-left: 0px !important;
+  padding-right: 55px !important; }
 
 .text-indigo {
   color: #6531A2; }
@@ -6841,6 +6897,35 @@ footer {
   .btn-indigo:hover {
     background-image: linear-gradient(0deg, #6531A2, #6531A2); }
 
+/*PLAYER*/
+#video {
+  margin-top: 130px;
+  border-radius: 16px; }
+
+.vjs-poster {
+  background-size: 100% !important; }
+
+.vjs-afterglow-skin .vjs-big-play-button:before {
+  content: "" !important;
+  width: 86px !important;
+  height: 75px !important;
+  background: url("../../images/svg/play.svg") no-repeat !important;
+  background-size: contain !important; }
+
+/*EFFECT*/
+@keyframes bot-hover {
+  0% {
+    width: 550px;
+    height: 680px;
+    background-size: 100%; }
+  50% {
+    width: 570px;
+    height: 700px;
+    background-size: 100%; }
+  100% {
+    width: 550px;
+    height: 680px;
+    background-size: 100%; } }
 .icon {
   display: inline-block;
   position: relative; }
@@ -7011,5 +7096,33 @@ footer {
   height: 72px;
   background: url("../../images/svg/doc.svg") no-repeat;
   background-size: contain; }
+.icon-line-circle {
+  width: 9px;
+  height: 9px;
+  background: url("../../images/svg/circle.svg") no-repeat;
+  background-size: contain; }
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .navbar-nav .nav-item {
+    padding: 22px 10px;
+    margin-right: 4px; }
+
+  .order-phone-content {
+    width: 160px; }
+
+  .block-1 h1 {
+    font-size: 38px; }
+
+  .block-4 .block-image-svg {
+    width: 420px; }
+
+  .block-column-1 img {
+    width: 100%; }
+
+  .block-column-2 img {
+    width: 100%; }
+
+  .btn {
+    padding: 20px 24px; } }
 
 /*# sourceMappingURL=bootstrap.css.map */
